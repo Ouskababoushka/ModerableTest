@@ -5,3 +5,5 @@ class ModeratedModel < ApplicationRecord
     self.moderated_columns = [:title, :content]
   end
 end
+
+# On déclare ici les columns qui seront testé par notre module.

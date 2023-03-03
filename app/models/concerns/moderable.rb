@@ -25,3 +25,8 @@ module Moderable
     verdict.all? ? self.is_accepted = true : self.is_accepted = false
   end
 end
+
+# Avant la validation d'un modèle où le concern est inclus, on déclenche la méthode moderate_content
+# On déclare un array Verdict qui va rassembler les booleans correspondant à chaque column du modèle.
+# Pour chaque columns non vide, on rend true ou flase si la prediction > prediction de rejet (si j'ai bien compris?)
+# Si notre verdict final contiens un false minimum, on rejette la création du modèle
