@@ -28,5 +28,5 @@ end
 
 # Avant la validation d'un modèle où le concern est inclus, on déclenche la méthode moderate_content
 # On déclare un array Verdict qui va rassembler les booleans correspondant à chaque column du modèle.
-# Pour chaque columns non vide, on rend true ou flase si la prediction > prediction de rejet (si j'ai bien compris?)
+# Pour chaque columns non vide, on rend true ou flase si la prediction > limite qu'on choisis (entre 0 et 1)
 # Si notre verdict final contiens un false minimum, on rejette la création du modèle
