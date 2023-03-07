@@ -4,7 +4,7 @@ module Moderable
   extend ActiveSupport::Concern
 
   included do
-    before_validation :moderate_content, on: [:create, :update], if: -> { new_record? || content_changed? }
+    before_validation :moderate_content, on: [:create, :update], if: -> { new_record? || content_changed? || title_changed? }
     class_attribute :moderated_columns, default: []
   end
 
